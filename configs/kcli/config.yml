@@ -42,7 +42,7 @@ default:
   yamlinventory: false
 local:
   host: 127.0.0.1
-  pool: default
+  pool: vms
   protocol: ssh
   type: kvm
   user: root
