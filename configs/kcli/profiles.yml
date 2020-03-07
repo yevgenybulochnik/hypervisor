@@ -1,2 +1,30 @@
 ubuntu1804:
   image: bionic-server-cloudimg-amd64.img
+
+large:
+  image: bionic-server-cloudimg-amd64.img
+  numcpus: 4
+  memory: 12288
+  disks:
+    - size: 150
+
+medium:
+  image: bionic-server-cloudimg-amd64.img
+  numcpus: 2
+  memory: 4086
+  disks:
+    - size: 50
+
+small:
+  image: bionic-server-cloudimg-amd64.img
+  numcpus: 1
+  memory: 2048
+
+tester:
+  image: bionic-server-cloudimg-amd64.img
+  numcpus: 1
+  memory: 2048
+  cmds:
+    - su - ubuntu -c 'git clone https://github.com/yevgenybulochnik/dotfiles.git ~/dotfiles'
+    - su - ubuntu -c 'ln -snf /home/ubuntu/dotfiles/.vimrc /home/ubuntu/'
+    - su - ubuntu -c 'vim'
