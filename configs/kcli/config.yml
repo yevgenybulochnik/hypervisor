@@ -1,0 +1,48 @@
+default:
+  autostart: false
+  client: local
+  cloudinit: true
+  cpuhotplug: false
+  cpumodel: host-model
+  diskinterface: virtio
+  disks:
+  - size: 10
+  disksize: 10
+  diskthin: true
+  enableroot: false
+  guestid: guestrhel764
+  insecure: false
+  keep_networks: false
+  memory: 512
+  memoryhotplug: false
+  nested: true
+  nets:
+  - default
+  notify: false
+  notifymethods:
+  - pushbullet
+  numcpus: 2
+  planview: false
+  pool: default
+  privatekey: false
+  report: false
+  reportall: false
+  reportdir: /tmp/static/reports
+  reporturl: http://127.0.0.1:9000
+  reservedns: false
+  reservehost: false
+  reserveip: false
+  rhnregister: false
+  rhnwait: 0
+  sharedkey: false
+  start: true
+  storemetadata: false
+  tunnel: false
+  vnc: false
+  yamlinventory: false
+local:
+  host: 127.0.0.1
+  pool: default
+  protocol: ssh
+  type: kvm
+  user: root
