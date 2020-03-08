@@ -1,0 +1,35 @@
+---
+- hosts: wireguard
+  roles:
+    - wireguard
+
+- hosts: devbox
+  roles:
+    - sudo-user
+    - zsh
+    - nvim
+    - dotfiles
+    - ripgrep
+    - ttyd
+    - pyenv
+    - docker
+    - libvirt
+    - nodejs
+    - apache
+    - fail2ban
+    - vagrant-virtualbox
+  vars:
+    username: yevgeny
+    dotfiles: https://github.com/yevgenybulochnik/dotfiles
+    install_dotfiles: true
+    vagrant_ver: 2.2.6
+    ttyd_build_deps: true
+    ttyd_sysd_service: true
+    ssl_cert: self_signed
+    web_pass: $apr1$X58cIV88$onWdoj/JHuCNc8Ml/FyKd/
+    domain: ybsdevbox.com
+  post_tasks:
+    - name: Add user to groups
+      user:
+        name: yevgeny
+        groups: libvirt,docker

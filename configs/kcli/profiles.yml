@@ -20,6 +20,11 @@ small:
   numcpus: 1
   memory: 2048
 
+micro:
+  image: bionic-server-cloudimg-amd64.img
+  numcpus: 1
+  memory: 1024
+
 tester:
   image: bionic-server-cloudimg-amd64.img
   numcpus: 1
