@@ -31,5 +31,5 @@ tester:
   memory: 2048
   cmds:
     - su - ubuntu -c 'git clone https://github.com/yevgenybulochnik/dotfiles.git ~/dotfiles'
-    - su - ubuntu -c 'ln -snf /home/ubuntu/dotfiles/.vimrc /home/ubuntu/'
+    - su - ubuntu -c '~/dotfiles/setup.sh --minimal-setup'
     - su - ubuntu -c 'vim'
