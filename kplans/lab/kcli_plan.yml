@@ -18,9 +18,7 @@ base:
 #   nets:
 #     - name: host-only
 #       ip: 10.1.0.2
-#       gateway: 10.1.0.1
 #       mask: 255.255.255.0
-#       dns: 10.1.0.1
 #     - name: host-bridge
 #       ip: 192.168.1.2
 #       gateway: 192.168.1.1
@@ -33,9 +31,7 @@ wgvpn:
   nets:
     - name: host-only
       ip: 10.1.0.3
-      gateway: 10.1.0.1
       mask: 255.255.255.0
-      dns: 10.1.0.1
     - name: host-bridge
       ip: 192.168.1.3
       gateway: 192.168.1.1
@@ -47,9 +43,7 @@ devbox:
   nets:
     - name: host-only
       ip: 10.1.0.4
-      gateway: 10.1.0.1
       mask: 255.255.255.0
-      dns: 10.1.0.1
     - name: host-bridge
       ip: 192.168.1.4
       gateway: 192.168.1.1
